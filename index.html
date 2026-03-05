@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>
       :root{
-        --yazi: 10px;
+        --yazi: 20px;
       }
       body{
         background-color: black;
@@ -48,19 +48,24 @@
   <body>
     <button id="buyut">Yazıyı büyüt</button>
     <button id="kucult">Yazıyı küçült</button>
-    <input placeholder="yaz…">
+    <input placeholder="yaz…" id="yazi1">
     <script>
       let yazi = 10;
+      const buyut = document.getElementById("buyut");
+      const kucult = document.getElementById("kucult");
+      const yazi1 = document.getElementById("yazi1");
       const root = document.documentElement.style;
-      document.getElementById("buyut").addEventListener("click", function(){
+      buyut.addEventListener("click", function(){
         root.setProperty("--yazi", (yazi + 5) + "px");
         yazi += 5;
       })
-      document.getElementById("kucult").addEventListener("click", function(){
+      kucult.addEventListener("click", function(){
         root.setProperty("--yazi", (yazi - 5) + "px");
         yazi -= 5;
       })
-      
+    buyut.style.marginLeft = ((window.innerWidth/2)-(buyut.getBoundingClientRect().width/2))+"px";
+      kucult.style.marginLeft = ((window.innerWidth/2)-(kucult.getBoundingClientRect().width/2))+'px';
+    yazi1.style.marginLeft = ((window.innerWidth/2)-(yazi1.getBoundingClientRect().width/2))+'px';
     </script>
   </body>
 </html>
