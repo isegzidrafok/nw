@@ -48,6 +48,7 @@
     <button id="buyut">Yazıyı küçült</button>
     <input placeholder="yaz…">
     <script>
+      try{
       let yazi = 10;
       const root = document.documentElement.style;
       document.getElementById("buyut").addEventListener("click", function(){
@@ -58,6 +59,7 @@
         root.setProperty("--yazi", (yazi - 5) + "px");
         yazi -= 5;
       })
+      }catch(e){alert(e);}
     </script>
   </body>
 </html>
