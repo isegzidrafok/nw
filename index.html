@@ -58,14 +58,18 @@
       buyut.addEventListener("click", function(){
         root.setProperty("--yazi", (yazi + 5) + "px");
         yazi += 5;
+        ortala();
       })
       kucult.addEventListener("click", function(){
         root.setProperty("--yazi", (yazi - 5) + "px");
         yazi -= 5;
+        ortala();
       })
+      function ortala(){
     buyut.style.marginLeft = ((window.innerWidth/2)-(buyut.getBoundingClientRect().width/2))+"px";
    kucult.style.marginLeft = ((window.innerWidth/2)-(kucult.getBoundingClientRect().width/2))+"px";
     yazi1.style.marginLeft = ((window.innerWidth/2)-(yazi1.getBoundingClientRect().width/2))+"px";
+      } ortala();
     </script>
   </body>
 </html>
