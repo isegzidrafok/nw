@@ -1,1 +1,60 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      :root{
+        --yazi: 10px;
+      }
+      body{
+        background-color: black;
+        font-family: sans-serif;
+        color: rgb(255, 120, 100);
+        padding: 5px;
+        text-align: center;
+        font-size: var(--yazi);
+      }
+      input{
+        border: 0px solid white;
+        background-color: transparent;
+        color: rgb(255, 120, 100);
+        text-align: center;
+        box-shadow: 0 0 10px rgba(255, 120, 100, 0.4);
+        margin: 5px;
+        float: center;
+      }
+      input::placeholder{
+        color: rgb(255, 120, 100);
+        text-align: center;
+      }
+      button{
+        border: 0 solid yellow;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(255, 120, 100, 0.3);
+        background-color: transparent;
+        margin: 5px;
+        float: center;
+      }
+      #buyut{
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="kucult">Yazıyı büyüt</button>
+    <button id="buyut">Yazıyı küçült</button>
+    <input placeholder="yaz…">
+    <script>
+      let yazi = 10;
+      const root = document.documentElement.style;
+      document.getElementById("buyut").addEventListener("click", function(){
+        root.setProperty("--yazi", (yazi + 5) + "px")
+        yazi += 5;
+      })
+      document.getElementById("kucult").addEventListener("click", function(){
+        root.setProperty("--yazi", (yazi - 5) + "px")
+        yazi -= 5;
+      })
+    </script>
+  </body>
+</html>
