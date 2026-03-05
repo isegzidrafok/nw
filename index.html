@@ -21,7 +21,6 @@
         text-align: center;
         box-shadow: 0 0 10px rgba(255, 120, 100, 0.4);
         margin: 5px;
-        float: center;
         display: block;
         font-size: var(--yazi);
       }
@@ -37,7 +36,6 @@
         box-shadow: 0 0 10px rgba(255, 120, 100, 0.4);
         background-color: transparent;
         margin: 5px;
-        float: center;
         color: rgb(255, 120, 100);
         display: block;
         font-size: var(--yazi);
@@ -52,7 +50,6 @@
     <button id="kucult">Yazıyı küçült</button>
     <input placeholder="yaz…">
     <script>
-      try{
       let yazi = 10;
       const root = document.documentElement.style;
       document.getElementById("buyut").addEventListener("click", function(){
@@ -63,7 +60,7 @@
         root.setProperty("--yazi", (yazi - 5) + "px");
         yazi -= 5;
       })
-      }catch(e){alert(e);}
+      
     </script>
   </body>
 </html>
