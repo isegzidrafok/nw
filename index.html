@@ -22,6 +22,7 @@
         box-shadow: 0 0 10px rgba(255, 120, 100, 0.4);
         margin: 5px;
         float: center;
+        display: inline-block;
       }
       input::placeholder{
         color: rgb(255, 120, 100);
@@ -30,10 +31,12 @@
       button{
         border: 0 solid yellow;
         text-align: center;
-        box-shadow: 0 0 5px rgba(255, 120, 100, 0.3);
+        box-shadow: 0 0 5px rgba(255, 120, 100, 0.4);
         background-color: transparent;
         margin: 5px;
         float: center;
+        color: rgb(255, 120, 100);
+        display: inline-block;
       }
       #buyut{
         margin-bottom: 10px;
@@ -48,11 +51,11 @@
       let yazi = 10;
       const root = document.documentElement.style;
       document.getElementById("buyut").addEventListener("click", function(){
-        root.setProperty("--yazi", (yazi + 5) + "px")
+        root.setProperty("--yazi", (yazi + 5) + "px");
         yazi += 5;
       })
       document.getElementById("kucult").addEventListener("click", function(){
-        root.setProperty("--yazi", (yazi - 5) + "px")
+        root.setProperty("--yazi", (yazi - 5) + "px");
         yazi -= 5;
       })
     </script>
